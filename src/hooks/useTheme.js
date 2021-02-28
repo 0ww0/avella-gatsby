@@ -10,9 +10,13 @@ const useTheme = () => {
 	const [mode, setmode] = useState(stored === "true" ? true : false);
 	useEffect(() => {
 	    if (stored) {
-	      setmode(stored);
+	      setmode(!mode);
 	    }
 	  }, []);
+	
+	useEffect(() => {
+    		localStorage.setItem('darkmode', !mode);
+  	}, [stored]);
 	
     const theme = mode ? DarkTheme : LightTheme;
 	
