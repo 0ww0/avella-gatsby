@@ -3,10 +3,9 @@ import { useState, useEffect } from "react";
 import { LightTheme, DarkTheme } from '../assets/styles/mixins/_theme';
 
 const useTheme = () => {
-    	const stored = false;
+    	let stored = false;
 	if(typeof localStorage !== `undefined`)  {
-		let stored = localStorage.getItem("darkmode");
-		console.log(stored)
+		stored = localStorage.getItem("darkmode");
 	} 
 	console.log(stored)
         const [mode, setmode] = useState(stored === "true" ? true : false);
