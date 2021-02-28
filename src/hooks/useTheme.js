@@ -1,5 +1,5 @@
 /* eslint-disable import/no-anonymous-default-export */
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { LightTheme, DarkTheme } from '../assets/styles/mixins/_theme';
 
 const useTheme = () => {
