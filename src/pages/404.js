@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from "gatsby"
 import Layout from "../layouts/Layout"
 import styled from "styled-components"
-import { flex } from "../assets/styles/mixins/_mixin"
+import { flex, color } from "../assets/styles/mixins/_mixin"
 
 const Notfound = styled.div`
 	${ flex({ axis : "column" }) };
@@ -13,7 +13,7 @@ const Notfound = styled.div`
 
     a {
         text-decoration: underline;
-        color: #373B44;
+       ${ color({ rgba: props => props.theme.textColor }) };
     }
 `;
 
