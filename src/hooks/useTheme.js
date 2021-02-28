@@ -3,11 +3,11 @@ import { useState, useEffect } from "react";
 import { LightTheme, DarkTheme } from '../assets/styles/mixins/_theme';
 
 const useTheme = () => {
-    	
-	if (typeof localStorage === `undefined`)  {
-		return 
+    	const stored = false,
+	if (typeof localStorage !== `undefined`)  {
+		const stored = localStorage.getItem("darkmode");
 	} 
-	const stored = localStorage.getItem("darkmode");
+	console.log(stored)
         const [mode, setmode] = useState(stored === "true" ? true : false);
 	const theme = mode ? DarkTheme : LightTheme;
 	const toggleMode = () => {
