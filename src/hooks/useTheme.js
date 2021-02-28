@@ -17,11 +17,11 @@ const useTheme = () => {
 	},[]);
 	useEffect(() => {
 	    localStorage.setItem("darkmode", mode);
-	 }, [stored]);
+	 }, [mode]);
 
 	const toggleMode = () => {
 		setmode(!mode)
-		localStorage.setItem("darkmode", mode);
+		localStorage.setItem("darkmode", !mode);
 	};
 
 	return {
