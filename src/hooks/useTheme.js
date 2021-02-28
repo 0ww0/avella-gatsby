@@ -12,14 +12,16 @@ const useTheme = () => {
 			setmode(!mode)
                	 	localStorage.setItem("darkmode", !mode);
 		};
+		
+		return {
+               		theme,
+			mode,
+			toggleMode
+		};
 	}
         
 
-	return {
-               theme,
-		mode,
-		toggleMode
-	};
+	
 };
 
 export default useTheme;
