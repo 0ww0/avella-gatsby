@@ -4,7 +4,7 @@ import { LightTheme, DarkTheme } from '../assets/styles/mixins/_theme';
 
 const useTheme = () => {
     	const stored = false,
-	if (typeof localStorage !== `undefined`)  {
+	if(typeof localStorage !== `undefined`)  {
 		const stored = localStorage.getItem("darkmode");
 	} 
 	console.log(stored)
