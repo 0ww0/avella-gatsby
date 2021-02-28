@@ -11,11 +11,11 @@ const useTheme = () => {
         const [mode, setmode] = useState(stored === "true" ? true : false);
 	console.log(stored, mode)
 	const theme = mode ? DarkTheme : LightTheme;
-// 	useEffect(() => {
-// 		if (stored) {
-//       		   setmode(stored);
-//     		}
-// 	},[]);
+	useEffect(() => {
+		if (mode) {
+      		   setmode(!mode);
+    		}
+	},[]);
 // 	useEffect(() => {
 // 	    localStorage.setItem("darkmode", mode);
 // 	 }, [mode]);
