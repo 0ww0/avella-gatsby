@@ -9,8 +9,8 @@ const useTheme = () => {
 	} 
 	
         const [mode, setmode] = useState(stored === "true" ? true : false);
-	console.log(stored, mode)
-	const theme = mode ? DarkTheme : LightTheme;
+	console.log(stored, !mode)
+	const theme = !mode ? DarkTheme : LightTheme;
 	useEffect(() => {
 		if (mode) {
       		   setmode(!mode);
