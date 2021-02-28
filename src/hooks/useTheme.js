@@ -12,11 +12,11 @@ const useTheme = () => {
 	const theme = mode ? DarkTheme : LightTheme;
 	useEffect(() => {
 		if (stored) {
-      		   setmode(!mode);
+      		   setmode(mode);
     		}
 	},[]);
 	useEffect(() => {
-	    localStorage.setItem("darkmode", !mode);
+	    localStorage.setItem("darkmode", mode);
 	 }, [stored]);
 
 	const toggleMode = () => {
