@@ -12,7 +12,7 @@ const useTheme = () => {
 	const theme = mode ? DarkTheme : LightTheme;
 	useEffect(() => {
 		if (stored) {
-      		   setmode(mode);
+      		   setmode(!mode);
     		}
 	},[]);
 	useEffect(() => {
