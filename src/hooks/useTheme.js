@@ -20,7 +20,7 @@ const useTheme = () => {
 	 }, [mode]);
 
 	const toggleMode = () => {
-		setmode(mode)
+		setmode(!mode)
 		localStorage.setItem("darkmode", mode);
 	};
 
