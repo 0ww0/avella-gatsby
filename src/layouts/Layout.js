@@ -11,7 +11,7 @@ const AppLayout = ({ children }) => {
     const { theme, mode, toggleMode } = useTheme()
   
     return (
-        <ThemeProvider theme={ theme }>
+        <ThemeProvider theme = { theme }>
             <div id="root">
                 <GlobalStyles />
                 <Header mode = { mode } handleToggle = { toggleMode } />

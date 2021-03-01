@@ -13,7 +13,7 @@ const Notfound = styled.div`
 
     a {
         text-decoration: underline;
-       ${ color({ rgba: props => props.theme.textColor }) };
+        ${ color({ rgba: props => props.theme.textColor }) };
     }
 `;
 

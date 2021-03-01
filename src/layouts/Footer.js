@@ -5,7 +5,7 @@ import { Container } from "../assets/styles/components/container";
 
 const Footer = () => {
     const [year] = useState(2021);
-    const [company] = useState("AVELLA.my")
+    const [company] = useState("avella.my")
 
     const CurrentYear = () => {
         return new Date().getFullYear()

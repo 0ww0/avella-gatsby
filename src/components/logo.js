@@ -16,7 +16,7 @@ const LogoHolder = styled.div`
     }
 `;
 
-const Logo = ({mode}) => {
+const Logo = ({ mode }) => {
     return ( 
         <LogoHolder>
             { mode ? 
