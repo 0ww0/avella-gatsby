@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { flex } from "../assets/styles/mixins/_mixin"
+import { flex, color } from "../assets/styles/mixins/_mixin"
 import Layout from "../layouts/Layout"
 
 const ComingSoon = styled.div`
@@ -9,6 +9,11 @@ const ComingSoon = styled.div`
 	justify-content: flex-start;
 	height: inherit;
 	text-align: center;
+
+	a{
+		text-decoration: underline;
+       	${ color({ rgba: props => props.theme.textColor }) };
+	}
 `;
 
 const Home = () => {
@@ -17,7 +22,7 @@ const Home = () => {
 			<ComingSoon>
 			<h1>Coming Soon</h1>
 			<br/>
-			<p>Any enquiry please email to us <a href="mailto:sale@avella.my">avella.my</a></p>
+			<p>Any enquiry please email to us <a href="mailto:hello@avella.my">hello@avella.my</a></p>
 			</ComingSoon>
 		</Layout>
   	)

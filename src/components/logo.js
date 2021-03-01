@@ -19,10 +19,10 @@ const LogoHolder = styled.div`
 const Logo = ({mode}) => {
     return ( 
         <LogoHolder>
-            { !mode ? 
-                ( <img src={ImgDark} alt="avella logo"/> ) 
+            { mode ? 
+                ( <img src={ImgLight} alt="avella logo"/> ) 
                 : 
-                ( <img src={ImgLight} alt="avella logo"/>  )
+                ( <img src={ImgDark} alt="avella logo"/> )
             }
         </LogoHolder>
     )

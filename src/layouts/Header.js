@@ -10,7 +10,7 @@ const Header = ({ mode, handleToggle }) => {
                 <HeaderSectionMode>
                     <ModeHolder>
                         { mode ? 
-                            ( < BiMoon onClick={handleToggle} /> ) 
+                            ( < BiMoon onClick={handleToggle}  /> ) 
                         : 
                             ( < BiSun onClick={handleToggle} /> )
                         }
