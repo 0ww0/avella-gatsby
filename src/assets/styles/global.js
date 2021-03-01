@@ -19,7 +19,7 @@ export const GlobalStyles = createGlobalStyle`
     html {
         font-family: Roboto, sans-serif;
         font-size: 16px;
-        line-height: 1.15; 
+        line-height: 1.5; 
         scroll-behavior: smooth;
         -webkit-font-smoothing: antialiased;
         -webkit-text-size-adjust: 100%;
