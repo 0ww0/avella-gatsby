@@ -6,7 +6,7 @@ const useTheme = () => {
     let stored = false;
 
 	if(typeof localStorage !== `undefined`)  {
-		stored = localStorage.getItem("mode");
+		stored = localStorage.getItem("mode") === "true" ? true : false;
 	} 
 	
     const [mode, setmode] = useState(stored === "true" ? true : false);
@@ -14,20 +14,15 @@ const useTheme = () => {
 	const theme = mode ? DarkTheme : LightTheme;
 	
 	useEffect(() => {
-		if(typeof localStorage !== `undefined`)  {
-			let stored = localStorage.getItem("mode");
+		let stored = localStorage.getItem("mode") === "true" ? true : false;
 
-			if (stored) {
-				setmode(!mode);
-		  	}
-		} 
-		
+		if (stored) {
+			setmode(stored);
+		}
 	},[]);
 
 	useEffect(() => {
-		if(typeof localStorage !== `undefined`)  {
-	    	localStorage.setItem("mode", !mode);
-		}
+		localStorage.setItem("mode", stored);
 	 }, [stored]);
 
 	const toggleMode = () => {
